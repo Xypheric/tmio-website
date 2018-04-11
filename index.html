@@ -98,7 +98,7 @@
                 <h5><span>Name : </span>Travis Mathews</h5>
                 <h5><span>Age : </span>30</h5>
                 <h5><span>Phone : </span><a href="tel:1-513-393-1397" class="cyan-text">513-393-1397</a></h5>
-                <h5><span>Email : </span><a href="mailto:travis@travismathews.io?subject=Mail%20from%20TMIO" class="cyan-text">Travis@TravisMathews.io</a> </h5>
+                <h5><span>Email : </span><a href="mailto:travis@travismathews.io?subject=Mail%20from%20TMIO" class="cyan-text">Travis@DigitalFoundryMedia.com</a> </h5>
                 <h5><span>Location : </span>Monroe, OH</h5>
 
               </div>
@@ -180,7 +180,7 @@
                 </div>
                 <div class="card-reveal">
                   <span class="card-title grey-text text-darken-4">Cincinnati Baking Diva<i class="material-icons right">close</i></span>
-                  <p>Johanna had a passion for sweets and had a growing facebook page.  Digital Foundry Media offered their services to bring a beautiful and simple site to life.  The baking diva logo went through several iterations before deciding on the current one, but the finished product gave us a perfect color material design color scheme for the site.  The site has a simple one page navigation and allows Johanna to show off her cakes with light weight mobile friendly images.</p>
+                  <p>Johanna had a passion for sweets and had a growing facebook page.  Digital Foundry Media offered their services to bring a beautiful and simple site to life.  The baking diva logo went through several iterations before deciding on the current one, but the finished product gave us a perfect material design color scheme for the site.  The site has a simple one page navigation and allows Johanna to show off her cakes with light weight, mobile friendly images.</p>
                 </div>
               </div>
             </div>
@@ -218,6 +218,38 @@
               </div>
             </div>
             
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="/images/card/eas-small.png">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Etch-A-Sketch<i class="material-icons right">more_vert</i></span>
+                  <p><a href="#">Codepen Link</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Etch-A-Sketch<i class="material-icons right">close</i></span>
+                  <p>A jquery project snippet that highlights the ability to dynamically draw a grid and manipulate the color or size to create a simple drawing pad that operates similarly to an etch a sketch.  Advanced features such as a random color or compounding gradient were added to enhance the project.  It also features simple controls to clear the grid or remake it with three size options.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="http://via.placeholder.com/628x353?text=Sojourner">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Sojourner<i class="material-icons right">more_vert</i></span>
+                  <p><a href="#">Codepen Link</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Sojourner<i class="material-icons right">close</i></span>
+                  <p>My first work with the Fetch API and asynchronous javascript.  Sojourner takes a city as an input and fetches the weather over the next several days using XYZ api and also fetches the hottest attractions using the Foursquare API.  Both of these methods return JSON data which is formatted to display in neat card panels.</p>
+                </div>
+              </div>
+            </div>
+            
             
           </div>
         </div>
@@ -243,33 +275,33 @@
           <div class="row">
             <div class="col s12 m12">
               <h3>Contact Me</h3>
-              <p class="white-text">LIke what you see? Please use the contact form below to reach out to me directly for any project quotes, or project consultations. I usually respond within 24 hours.</p>
+              <p class="white-text">Like what you see? Please use the contact form below to reach out to me directly for any project quotes, or project consultations. I usually respond within 24 hours.</p>
             </div>
             <div class="clearfix card-panel col s12">
-              <form>
+              <form id="ajax-contact" method="post" action="">
                 <div class="input-field col s12 m6">
                   <i class="material-icons prefix">account_circle</i>
-                  <input id="first_name" type="text" class="validate">
+                  <input id="first_name" type="text" class="validate" name="first_name" required>
                   <label for="first_name">First Name</label>
                 </div>
                 <div class="input-field col s12 m6">
                   <i class="material-icons prefix">account_circle</i>
-                  <input id="last_name" type="text" class="validate">
+                  <input id="last_name" type="text" class="validate" name="last_name" required>
                   <label for="last_name">Last Name</label>
                 </div>
                 <div class="input-field col s12 m6">
                   <i class="material-icons prefix">phone</i>
-                  <input id="telephone" type="tel" class="validate">
+                  <input id="telephone" type="tel" class="validate" name="telephone" required>
                   <label for="telephone">Telephone</label>
                 </div>
                 <div class="input-field col s12 m6">
                   <i class="material-icons prefix">email</i>
-                  <input id="email" type="email" class="validate">
+                  <input id="email" type="email" class="validate" name="email" required>
                   <label for="email">Email</label>
                 </div>
                 <div class="input-field col s12">
                   <i class="material-icons prefix">mode_edit</i>
-                  <textarea id="details" class="materialize-textarea"></textarea>
+                  <textarea id="details" class="materialize-textarea" name="details" required></textarea>
                   <label for="details">Details</label>
                 </div>
                 <div class="col s12 center">
@@ -318,6 +350,16 @@
       </div>
     </div>
   </footer>
+    <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 id="contact-status"></h4>
+      <p id="contact-text"></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-cyan btn-flat">Close</a>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
